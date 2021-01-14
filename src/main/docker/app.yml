@@ -1,0 +1,16 @@
+version: '2'
+services:
+  zipit_smart-app:
+    image: zipit_smart
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,swagger
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - SPRING_DATASOURCE_URL=jdbc:mysql://zipit_smart-mysql:3306/zipit_smart?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+      - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
+    ports:
+      - 8080:8080
+  zipit_smart-mysql:
+    extends:
+      file: mysql.yml
+      service: zipit_smart-mysql
