@@ -1,6 +1,5 @@
 <template>
-<div class="bg-dark
-">
+<div class="login">
 
     <div class="row justify-content-center">
         <b-alert show variant="danger" v-if="authenticationError">
@@ -8,8 +7,7 @@
         </b-alert>
     </div>
     <div id="layoutAuthentication">
-        <div>
-            <img src="../../../content/images/logo-jhipster.png">
+        <div class="logo">
         </div>
         <div id="layoutAuthentication_content">
             <main>
@@ -50,20 +48,6 @@
                 </div>
             </main>
         </div>
-        <div id="layoutAuthentication_footer">
-            <footer class="py-4 bg-light mt-auto">
-                <div class="container-fluid">
-                    <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Zimswitch 2021</div>
-                        <div>
-                            <a href="#">Privacy Policy</a>
-                            &middot;
-                            <a href="#">Terms &amp; Conditions</a>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </div>
     </div>
 
 </div>
@@ -73,13 +57,21 @@
 </script>
 
 <style>
-.logo-img {
+.logo {
     height: 100%;
-    background: url("../../../content/images/logo-jhipster.png") no-repeat center center;
+    background: url("../../../content/images/email2.png") no-repeat;
     background-size: contain;
     width: 100%;
     filter: drop-shadow(0 0 0.05rem white);
-    text-align: center;
+}
+
+.login {
+    background: url("../../../content/images/email2.png") no-repeat;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 </style>
     <!-- <div class="row justify-content-center">
