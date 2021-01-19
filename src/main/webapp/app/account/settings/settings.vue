@@ -1,8 +1,8 @@
 <template>
     <div>
         <div class="row justify-content-center">
-            <div class="col-md-8 toastify-container">
-                <h2 v-if="username" id="settings-title"><span >User settings for [<b>{{username}}</b>]</span></h2>
+            <div class="col-md-5 toastify-container">
+                <h2 v-if="username" id="settings-title"><span >User settings </span></h2>
 
                 <div class="alert alert-success" role="alert" v-if="success" >
                     <strong>Settings saved!</strong>

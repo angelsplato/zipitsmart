@@ -1,8 +1,7 @@
 <template>
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <span class="logo-img"></span>
-        <span class="navbar-brand">Zipit Smart</span>
 
+    <a class="navbar-brand" href="/dashboard">Zipit smart portal</a>
     <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
     <!-- Navbar Search-->
     <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
@@ -33,14 +32,10 @@
 </script>
 
 <style scoped>
-
 .logo-img {
-    height: 100%;
-    background: url("../../../content/images/email2.png") no-repeat;
-    background-size: cover;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    width: 100%;
-    filter: drop-shadow(0 0 0.05rem white);
+    height: 6rem;
+    background: url("../../../content/images/logo.png") no-repeat;
+    background-size: contain;
+    width: 7rem;
 }
 </style>

@@ -51,7 +51,6 @@ router.beforeEach((to, from, next) => {
   if (!to.matched.length) {
     next('/not-found');
   }
-
   if (to.meta && to.meta.authorities && to.meta.authorities.length > 0) {
     accountService.hasAnyAuthorityAndCheckAuth(to.meta.authorities).then(value => {
       if (!value) {

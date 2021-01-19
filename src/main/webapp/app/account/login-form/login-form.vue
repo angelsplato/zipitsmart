@@ -1,5 +1,7 @@
 <template>
 <div class="login">
+    <nav class="logo">
+    </nav>
 
     <div class="row justify-content-center">
         <b-alert show variant="danger" v-if="authenticationError">
@@ -7,17 +9,14 @@
         </b-alert>
     </div>
     <div id="layoutAuthentication">
-        <div class="logo">
-        </div>
         <div id="layoutAuthentication_content">
             <main>
                 <div class="container">
-                    <span class="logo-img "></span>
                     <div class="row justify-content-center">
                         <div class="col-lg-5">
-                            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                            <div class="card shadow-lg border-0 rounded-lg ">
                                 <div class="card-header">
-                                    <h3 class="text-center font-weight-light my-4">Zipit smart port</h3>
+                                    <h3 class="text-center font-weight-light my-4">Zipit smart portal</h3>
                                 </div>
                                 <div class="card-body">
                                     <form role="form" v-on:submit.prevent="doLogin()">
@@ -58,11 +57,18 @@
 
 <style>
 .logo {
-    height: 100%;
-    background: url("../../../content/images/email2.png") no-repeat;
+    height: 6rem;
+    background: url("../../../content/images/logo.png") no-repeat;
     background-size: contain;
-    width: 100%;
-    filter: drop-shadow(0 0 0.05rem white);
+    width: 7rem;
+}
+
+.zipit-smart-logo {
+    height: 10rem;
+    background: url("../../../content/images/zipitsmartlogo.png") no-repeat;
+    background-size: contain;
+    text-align: center;
+    width: 10rem;
 }
 
 .login {

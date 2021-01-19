@@ -17,6 +17,7 @@ export default class LoginForm extends Vue {
   public password = null;
   public rememberMe: boolean = null;
 
+
   public doLogin(): void {
     const data = { username: this.login, password: this.password, rememberMe: this.rememberMe };
     axios

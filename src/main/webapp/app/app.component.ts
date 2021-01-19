@@ -22,7 +22,20 @@ import ResetPasswordFinish from './account/reset-password/finish/reset-password-
   },
 })
 export default class App extends Vue {
+  // public get authenticated(): boolean {
+  //   if(this.$store.getters.authenticated){
+  //     this.$router.push('/');
+  //     return true;
+  //   }
+  //   else if(!this.$store.getters.authenticated){
+  //     this.$router.push('login');
+
+  //   }
+        
+  // }
+
   public get authenticated(): boolean {
     return this.$store.getters.authenticated;
+        
   }
 }

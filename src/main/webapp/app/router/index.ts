@@ -7,13 +7,13 @@ Component.registerHooks([
 ]);
 import Router from 'vue-router';
 
+const Merchant = () => import('@/core/merchants/merchant.vue');
 const Home = () => import('@/core/home/home.vue');
 const Error = () => import('@/core/error/error.vue');
 import account from '@/router/account.ts';
 import admin from '@/router/admin.ts';
 import entities from '@/router/entities.ts';
 import pages from '@/router/pages.ts';
-const Merchant = () => import('@/core/merchants/merchant.vue');
 
 Vue.use(Router);
 
@@ -24,7 +24,7 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: Home
+      component: Home,
     },
     {
       path: '/merchant',
