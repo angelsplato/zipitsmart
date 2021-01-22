@@ -26,7 +26,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="inputPassword">Password</label>
-                                            <input class="form-control py-4" id="password" variant="warning" type="password" name="password" v-model.trim="name" placeholder="Your password" v-model="password" />
+                                            <input class="form-control py-4" id="password" variant="warning" type="password" name="password"  placeholder="Your password" v-model="password" />
                                         </div>
                                         <b-form-checkbox id="rememberMe" name="rememberMe" v-model="rememberMe" checked>
                                             <span>Remember password</span>

@@ -9,6 +9,7 @@ import LoginForm from '@/account/login-form/login-form.vue';
 import Merchant from '@/core/merchants/merchant.vue';
 import ResetPasswordFinish from './account/reset-password/finish/reset-password-finish.vue';
 
+
 @Component({
   components: {
     ribbon: Ribbon,
@@ -22,20 +23,41 @@ import ResetPasswordFinish from './account/reset-password/finish/reset-password-
   },
 })
 export default class App extends Vue {
+
+
   // public get authenticated(): boolean {
-  //   if(this.$store.getters.authenticated){
+  //   if (!this.$store.getters.authenticated) {
+  //     this.$router.push('login');
+  //     return false;
+  //   }
+  //   else {
   //     this.$router.push('/');
   //     return true;
-  //   }
-  //   else if(!this.$store.getters.authenticated){
-  //     this.$router.push('login');
 
   //   }
-        
+
+  // }
+
+  // public get authenticated(): boolean {
+  //   if (!this.$store.getters.authenticated) {
+  //     return false;
+  //   }
+  //   else {
+  //     this.$router.push('/');
+  //     return true;
+
+  //   }
+
+  // }
+
+
+
+  // mounted() {
+  //   this.authenticated;
   // }
 
   public get authenticated(): boolean {
     return this.$store.getters.authenticated;
-        
+
   }
 }

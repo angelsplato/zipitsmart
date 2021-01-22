@@ -2,13 +2,8 @@ import axios from 'axios';
 import Component from 'vue-class-component';
 import { Vue, Inject } from 'vue-property-decorator';
 import AccountService from '@/account/account.service';
-@Component({
-  watch: {
-    $route() {
-      this.$root.$emit('bv::hide::modal', 'login-page');
-    },
-  },
-})
+
+@Component
 export default class LoginForm extends Vue {
   @Inject('accountService')
   private accountService: () => AccountService;
@@ -16,7 +11,8 @@ export default class LoginForm extends Vue {
   public login = null;
   public password = null;
   public rememberMe: boolean = null;
-
+  
+ 
 
   public doLogin(): void {
     const data = { username: this.login, password: this.password, rememberMe: this.rememberMe };
@@ -33,7 +29,8 @@ export default class LoginForm extends Vue {
           }
         }
         this.authenticationError = false;
-        this.$root.$emit('bv::hide::modal', 'login-page');
+        // window.location.href = '/';
+        console.log('redirect')
         this.accountService().retrieveAccount();
       })
       .catch(() => {
