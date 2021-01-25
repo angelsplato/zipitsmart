@@ -16,6 +16,7 @@
     "bootstrap": "4.5.0",
     "bootstrap-vue": "2.14.0",
     "date-fns": "2.14.0",
+    "jquery": "^3.5.1",
     "startbootstrap-sb-admin": "^6.0.2",
     "swagger-ui-dist": "3.25.4",
     "vue": "2.6.11",

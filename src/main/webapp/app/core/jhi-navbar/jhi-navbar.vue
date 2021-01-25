@@ -27,7 +27,7 @@
     </ul>
 </nav>
 </template>
-
+<script src="scripts.js"></script>
 <script lang="ts" src="./jhi-navbar.component.ts">
 </script>
 

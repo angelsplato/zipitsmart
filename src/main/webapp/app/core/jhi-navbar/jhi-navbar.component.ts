@@ -2,6 +2,7 @@ import { Component, Inject, Vue } from 'vue-property-decorator';
 import { VERSION } from '@/constants';
 import LoginService from '@/account/login.service';
 import AccountService from '@/account/account.service';
+import JQuery from 'jquery';
 @Component
 export default class JhiNavbar extends Vue {
   @Inject('loginService')
@@ -13,7 +14,21 @@ export default class JhiNavbar extends Vue {
   private languages: any = this.$store.getters.languages;
   private hasAnyAuthorityValue = false;
 
-  created() {}
+  created() { }
+
+  mounted() {
+    (function ($) {
+      "use strict";
+      // Toggle the side navigation
+      $("#sidebarToggle").on("click", function (e) {
+        console.log("}}}}}}}}}}}}}}}}}}}}}");
+        e.preventDefault();
+
+        $("body").toggleClass("sb-sidenav-toggled");
+      });
+    })(jQuery);
+
+  }
 
   public subIsActive(input) {
     const paths = Array.isArray(input) ? input : [input];

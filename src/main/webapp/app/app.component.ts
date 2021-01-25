@@ -8,8 +8,6 @@ import SideBar from '@/core/sidebar/SideBar.vue';
 import LoginForm from '@/account/login-form/login-form.vue';
 import Merchant from '@/core/merchants/merchant.vue';
 import ResetPasswordFinish from './account/reset-password/finish/reset-password-finish.vue';
-
-
 @Component({
   components: {
     ribbon: Ribbon,
@@ -23,6 +21,7 @@ import ResetPasswordFinish from './account/reset-password/finish/reset-password-
   },
 })
 export default class App extends Vue {
+
 
 
   // public get authenticated(): boolean {
