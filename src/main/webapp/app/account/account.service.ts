@@ -20,6 +20,7 @@ export default class AccountService {
     });
   }
 
+
   public retrieveAccount(): Promise<boolean> {
     return new Promise(resolve => {
       axios

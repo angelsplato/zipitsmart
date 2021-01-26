@@ -2,7 +2,6 @@
 <div class="login">
     <nav class="logo">
     </nav>
-
     <div class="row justify-content-center">
         <b-alert show variant="danger" v-if="authenticationError">
             <strong>Failed to sign in!</strong> Please check your credentials and try again.

@@ -116,7 +116,7 @@
                             <button class="btn btn-success btn-sm" v-on:click="setActive(user, false)" v-if="user.activated"
                                     :disabled="username === user.login">Activated</button>
                         </td>
-                        
+
                         <td>
                             <div v-for="authority of user.authorities" :key="authority">
                                 <span class="badge badge-info">{{ authority }}</span>

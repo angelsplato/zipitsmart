@@ -19,7 +19,18 @@ export default class JhiMetrics extends Vue {
   public mounted(): void {
     this.refresh();
   }
+  beforeMount() {
+    this.delay(500);
+  }
 
+
+    delay(ms) {
+      const startPoint = new Date().getTime();
+      while (new Date().getTime() - startPoint <= ms) {
+        /* wait */
+      }
+    }
+  
   public refresh(): void {
     this.metricsService()
       .getMetrics()

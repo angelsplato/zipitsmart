@@ -4,14 +4,14 @@
         <div class="sb-sidenav-menu">
             <div class="nav">
                 <div class="sb-sidenav-menu-heading">Core</div>
-                <a class="nav-link" href="/dashboard">
+                <router-link class="nav-link" to="/dashboard">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Dashboard
-                </a>
-                <a class="nav-link" href="/admin/user-management">
+                </router-link>
+                <router-link class="nav-link" to="/admin/user-management">
                     <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                     Users
-                </a>
+                </router-link>
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                     <div class="sb-nav-link-icon"><i class="fas fa-chart-bar"></i></div>
                     Monitoring
@@ -19,14 +19,18 @@
                 </a>
                 <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="/admin/logs">
+                        <router-link class="nav-link" to="/admin/audits">
                             <div class="sb-nav-link-icon"><i class="fas fa-file-invoice"></i></div>
                             Audits
-                        </a>
-                        <a class="nav-link" href="/admin/jhi-metrics">
-                            <div class="sb-nav-link-icon"><i class="fas fa-chart-bar"></i></div>
+                        </router-link>
+                        <router-link class="nav-link" to="/admin/jhi-metrics">
+                            <div class="sb-nav-link-icon"><i class="fas fa-signal"></i></div>
                             Metrics
-                        </a>
+                        </router-link>
+                        <router-link class="nav-link" to="/admin/docs">
+                            <div class="sb-nav-link-icon"><i class="fas fa-plug"></i></div>
+                            API
+                        </router-link>
                     </nav>
                 </div>
             </div>

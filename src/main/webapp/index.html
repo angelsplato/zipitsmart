@@ -5,31 +5,91 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link href="./content/css/styles.css" type="css" rel="stylesheet" />
   <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
     crossorigin="anonymous" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"
     crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    #loading-wrapper {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+
+    #loading-text {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: rgb(51, 51, 51);
+      width: 100px;
+      height: 30px;
+      margin: -7px 0 0 -45px;
+      text-align: center;
+      font-family: 'Montserrat';
+      font-size: 20px;
+      font-weight:bolder;
+    }
+
+    #loading-content {
+      display: block;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      width: 170px;
+      height: 170px;
+      margin: -85px 0 0 -85px;
+      border: 3px solid #F00;
+    }
+
+    #loading-content {
+      border: 5px solid transparent;
+      border-top-color: rgb(255, 187, 14);
+      border-bottom-color: rgb(255, 187, 14);
+      border-radius: 60%;
+      -webkit-animation: loader 2s linear infinite;
+      -moz-animation: loader 2s linear infinite;
+      -o-animation: loader 2s linear infinite;
+      animation: loader 2s linear infinite;
+    }
+
+    @keyframes loader {
+      0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </head>
 
 <body class="sb-nav-fixed">
   <noscript>
 
   </noscript>
-  <div id="app"></div>
+  <div id="app">
+    <div id="loading-wrapper">
+      <div id="loading-text">ZIMSWITCH</div>
+      <div id="loading-content"></div>
+    </div>
+  </div>
   <!-- built files will be auto injected -->
   <!-- <script language="javascript">
         window.location.href = "dist/index.html"
     </script> -->
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script src="./content/js/scripts.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-  <script src="./content/demo/chart-area-demo.js"></script>
-  <script src="./content/demo/chart-bar-demo.js"></script>
   <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
   <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
   <script src="./content/demo/datatables-demo.js"></script>

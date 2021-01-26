@@ -8,52 +8,35 @@ import SideBar from '@/core/sidebar/SideBar.vue';
 import LoginForm from '@/account/login-form/login-form.vue';
 import Merchant from '@/core/merchants/merchant.vue';
 import ResetPasswordFinish from './account/reset-password/finish/reset-password-finish.vue';
+import Home from '@/core/home/home.component';
 @Component({
   components: {
     ribbon: Ribbon,
     'jhi-navbar': JhiNavbar,
     'login-form': LoginForm,
-    HeroContent: HeroContent,
+   HeroContent: HeroContent,
     SideBar: SideBar,
     'jhi-footer': JhiFooter,
     merchant: Merchant,
     ResetPasswordFinish: ResetPasswordFinish,
+    Home:Home
   },
 })
 export default class App extends Vue {
 
+  data() {
+    return {
+      isAuthenticated: this.authenticated
 
 
-  // public get authenticated(): boolean {
-  //   if (!this.$store.getters.authenticated) {
-  //     this.$router.push('login');
-  //     return false;
-  //   }
-  //   else {
-  //     this.$router.push('/');
-  //     return true;
-
-  //   }
-
-  // }
-
-  // public get authenticated(): boolean {
-  //   if (!this.$store.getters.authenticated) {
-  //     return false;
-  //   }
-  //   else {
-  //     this.$router.push('/');
-  //     return true;
-
-  //   }
-
-  // }
+    }
 
 
+  }
+  mounted() {
 
-  // mounted() {
-  //   this.authenticated;
-  // }
+  
+}
 
   public get authenticated(): boolean {
     return this.$store.getters.authenticated;

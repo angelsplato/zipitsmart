@@ -12,7 +12,6 @@ export default class LoginForm extends Vue {
   public password = null;
   public rememberMe: boolean = null;
   
- 
 
   public doLogin(): void {
     const data = { username: this.login, password: this.password, rememberMe: this.rememberMe };
@@ -29,9 +28,8 @@ export default class LoginForm extends Vue {
           }
         }
         this.authenticationError = false;
-        // window.location.href = '/';
-        console.log('redirect')
         this.accountService().retrieveAccount();
+        window.location.href = '/dashboard';
       })
       .catch(() => {
         this.authenticationError = true;

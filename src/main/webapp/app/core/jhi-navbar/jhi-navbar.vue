@@ -17,7 +17,8 @@
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="/account/settings">Settings</a>
+                <router-link class="dropdown-item" to="/account/settings">Settings
+                </router-link>
                 <div class="dropdown-divider"></div>
                 <b-dropdown-item v-if="authenticated" v-on:click="logout()" id="logout" active-class="active">
                     <span>Logout</span>
@@ -27,6 +28,7 @@
     </ul>
 </nav>
 </template>
+
 <script src="scripts.js"></script>
 <script lang="ts" src="./jhi-navbar.component.ts">
 </script>

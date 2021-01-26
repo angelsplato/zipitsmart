@@ -4,6 +4,8 @@ import buildPaginationQueryOpts from '@/shared/sort/sorts';
 import { Authority } from '@/shared/security/authority';
 
 export default class UserManagementService {
+
+  
   public get(userId: number): Promise<any> {
     return axios.get(`api/users/${userId}`);
   }

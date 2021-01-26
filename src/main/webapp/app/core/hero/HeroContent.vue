@@ -1,7 +1,8 @@
 <template>
 <div id="layoutSidenav_content">
     <main>
-        <router-view></router-view>
+        <router-view>
+        </router-view>
     </main>
     <footer class="py-4 bg-light mt-auto">
         <div class="container-fluid">
@@ -28,12 +29,13 @@ import {
 @Component
 export default class HeroContent extends Vue {
 
+
+
 }
 </script>
 
 <style scoped>
-main{
-margin: 2rem 2rem 2rem 2rem;
+main {
+    margin: 2rem 2rem 2rem 2rem;
 }
-
 </style>

@@ -1,28 +1,18 @@
 <template>
-<div class="sb-nav-fixed">
-    <div v-if="authenticated == true">
+<div id="app" class="sb-nav-fixed">
+    <div class="content" v-if="authenticated">
         <jhi-navbar />
         <div id="layoutSidenav">
             <SideBar />
             <HeroContent />
         </div>
     </div>
-    <login-form v-if="authenticated == false"></login-form>
+    <login-form v-if="!authenticated"></login-form>
+
 </div>
 </template>
-<script src="content/js/scripts.js"></script>
 <script lang="ts" src="./app.component.ts">
 </script>
 
-<!-- <div>
-
-    <div class="sb-nav-fixed" v-if="authenticated == true">
-        <jhi-navbar />
-        <div id="layoutSidenav">
-            <SideBar />
-            <HeroContent />
-        </div>
-    </div>
-
-    <login-form v-if="authenticated == false"></login-form>
-</div> -->
+<style scoped>
+</style>

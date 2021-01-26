@@ -18,4 +18,7 @@ export default class SideBarView extends Vue {
   public get username(): string {
     return this.$store.getters.account ? this.$store.getters.account.login : '';
   }
+
+  
+ 
 }

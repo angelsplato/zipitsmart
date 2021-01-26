@@ -1,18 +1,18 @@
 <template>
-    <div>
-        <h2 id="configuration-page-heading">Configuration</h2>
+<div>
+    <h2 id="configuration-page-heading">Configuration</h2>
 
-        <div v-if="allConfiguration && configuration">
-            <span>Filter (by prefix)</span> <input type="text" v-model="filtered" class="form-control">
-            <h3>Spring configuration</h3>
-            <table class="table table-striped table-bordered table-responsive d-table">
-                <thead>
+    <div v-if="allConfiguration && configuration">
+        <span>Filter (by prefix)</span> <input type="text" v-model="filtered" class="form-control">
+        <h3>Spring configuration</h3>
+        <table class="table table-striped table-bordered table-responsive d-table">
+            <thead>
                 <tr>
                     <th class="w-40" v-on:click="changeOrder('prefix')"><span>Prefix</span></th>
                     <th class="w-60" v-on:click="changeOrder('properties')"><span>Properties</span></th>
                 </tr>
-                </thead>
-                <tbody>
+            </thead>
+            <tbody>
                 <tr v-for="entry in orderBy(filterBy(configuration, filtered), orderProp, reverse === true ? 1 : -1)" :key="entry.prefix">
                     <td><span>{{entry.prefix}}</span></td>
                     <td>
@@ -24,29 +24,29 @@
                         </div>
                     </td>
                 </tr>
-                </tbody>
-            </table>
-            <div v-for="key in keys(allConfiguration)" :key="key">
-                <h4><span>{{key}}</span></h4>
-                <table class="table table-sm table-striped table-bordered table-responsive d-table">
-                    <thead>
+            </tbody>
+        </table>
+        <div v-for="key in keys(allConfiguration)" :key="key">
+            <h4><span>{{key}}</span></h4>
+            <table class="table table-sm table-striped table-bordered table-responsive d-table">
+                <thead>
                     <tr>
                         <th class="w-40">Property</th>
                         <th class="w-60">Value</th>
                     </tr>
-                    </thead>
-                    <tbody>
+                </thead>
+                <tbody>
                     <tr v-for="item of allConfiguration[key]" :key="item.key">
                         <td class="break">{{item.key}}</td>
                         <td class="break">
                             <span class="float-right badge-secondary break">{{item.val}}</span>
                         </td>
                     </tr>
-                    </tbody>
-                </table>
-            </div>
+                </tbody>
+            </table>
         </div>
     </div>
+</div>
 </template>
 
 <script lang="ts" src="./configuration.component.ts">

@@ -1,6 +1,6 @@
 <template>
-  <div class="">
-       <div v-if="audits">
+<div class="">
+    <div v-if="audits">
         <h2 id="audits-page-heading">Audits</h2>
 
         <div class="row">
@@ -10,12 +10,12 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">from</span>
                     </div>
-                    <input type="date" class="form-control" name="start" v-model="fromDate" v-on:change="transition()" required/>
+                    <input type="date" class="form-control" name="start" v-model="fromDate" v-on:change="transition()" required />
 
                     <div class="input-group-append">
                         <span class="input-group-text">To</span>
                     </div>
-                    <input type="date" class="form-control" name="end" v-model="toDate" v-on:change="transition()" required/>
+                    <input type="date" class="form-control" name="end" v-model="toDate" v-on:change="transition()" required />
                 </div>
             </div>
         </div>
@@ -26,23 +26,29 @@
         <div class="table-responsive" v-if="audits && audits.length > 0">
             <table class="table table-sm table-striped">
                 <thead>
-                <tr>
-                  <th v-on:click="changeOrder('auditEventDate', 'timestamp')"><span>Date</span> <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'auditEventDate'"></jhi-sort-indicator></th>
-                  <th v-on:click="changeOrder('principal', 'principal')"><span>User</span> <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'principal'"></jhi-sort-indicator></th>
-                  <th v-on:click="changeOrder('auditEventType', 'type')"><span>State</span> <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'auditEventType'"></jhi-sort-indicator></th>
-                  <th><span>Extra data</span></th>
-                </tr>
+                    <tr>
+                        <th v-on:click="changeOrder('auditEventDate', 'timestamp')"><span>Date</span>
+                            <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'auditEventDate'"></jhi-sort-indicator>
+                        </th>
+                        <th v-on:click="changeOrder('principal', 'principal')"><span>User</span>
+                            <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'principal'"></jhi-sort-indicator>
+                        </th>
+                        <th v-on:click="changeOrder('auditEventType', 'type')"><span>State</span>
+                            <jhi-sort-indicator :current-order="propOrder" :reverse="reverse" :field-name="'auditEventType'"></jhi-sort-indicator>
+                        </th>
+                        <th><span>Extra data</span></th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr v-for="audit in audits" :key="audit.timestamp">
-                    <td><span>{{audit.timestamp | formatDate}}</span></td>
-                    <td><small>{{audit.principal}}</small></td>
-                    <td>{{audit.type}}</td>
-                    <td>
-                        <span v-if="audit.data && audit.data.message">{{audit.data.message}}</span>
-                        <span v-if="audit.data && audit.data.remoteAddress"><span>Remote Address</span> {{audit.data.remoteAddress}}</span>
-                    </td>
-                </tr>
+                    <tr v-for="audit in audits" :key="audit.timestamp">
+                        <td><span>{{audit.timestamp | formatDate}}</span></td>
+                        <td><small>{{audit.principal}}</small></td>
+                        <td>{{audit.type}}</td>
+                        <td>
+                            <span v-if="audit.data && audit.data.message">{{audit.data.message}}</span>
+                            <span v-if="audit.data && audit.data.remoteAddress"><span>Remote Address</span> {{audit.data.remoteAddress}}</span>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -55,8 +61,7 @@
             </div>
         </div>
     </div>
-  </div>
-   
+</div>
 </template>
 
 <script lang="ts" src="./audits.component.ts">
