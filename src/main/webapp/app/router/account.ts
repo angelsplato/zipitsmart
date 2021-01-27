@@ -10,11 +10,6 @@ const LogIn = () => import('@/account/login-form/login-form.vue');
 
 export default [
   {
-    path: '/login',
-    name: 'LoginForm',
-    component: LogIn
-  },
-  {
     path: '/register',
     name: 'Register',
     component: Register,

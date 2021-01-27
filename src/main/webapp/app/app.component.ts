@@ -24,20 +24,6 @@ import Home from '@/core/home/home.component';
 })
 export default class App extends Vue {
 
-  data() {
-    return {
-      isAuthenticated: this.authenticated
-
-
-    }
-
-
-  }
-  mounted() {
-
-  
-}
-
   public get authenticated(): boolean {
     return this.$store.getters.authenticated;
 
